@@ -1,0 +1,179 @@
+// Reset
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// Styling
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: white;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+// Section
+
+.Process {
+  height: 100vh;
+  background: #313638;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+
+  .container {
+    .text {
+      margin-bottom: 5rem;
+
+      span {
+        animation: texts 5s linear 0s infinite;
+
+        color: #e4b363;
+      }
+      h1 {
+        font-family: "Indie Flower", cursive;
+        font-size: 5rem;
+        color: #e0dfd5;
+      }
+    }
+
+    .icons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2rem;
+      margin-top: 1rem;
+
+      i {
+        cursor: pointer;
+        padding: 3rem;
+        background: #e0dfd5;
+        color: #e4b363;
+        border-radius: 50%;
+        margin: 2rem 0;
+        transition: all ease-in 300ms;
+
+        &:hover {
+          background: #ef6461;
+          color: #e0dfd5;
+          padding: 3.5rem;
+        }
+      }
+
+      h4 {
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 1rem;
+        color: #e0dfd5;
+        border-bottom: 2px solid #ef6461;
+      }
+
+      p {
+        margin-top: 1rem;
+        text-align: center;
+        padding: 0 1rem;
+        color: #e0dfd5;
+      }
+    }
+  }
+}
+
+@keyframes texts {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-height: 650px) {
+  .Process {
+    height: 120vh;
+  }
+}
+@media (max-height: 550px) {
+  .Process {
+    height: 150vh;
+  }
+}
+@media (max-height: 450px) {
+  .Process {
+    height: 200vh;
+  }
+}
+@media (max-width: 768px) {
+  .Process {
+    height: 175vh;
+    background: #313638;
+    .container {
+      .icons {
+        grid-template-columns: repeat(1, 1fr);
+
+        div {
+          padding-bottom: 1rem;
+          border-bottom: #ef6461 2px dashed;
+          &:last-child {
+            border: transparent;
+          }
+        }
+        h4 {
+          border-bottom: transparent;
+        }
+      }
+
+      .text {
+        h1 {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .Process {
+    height: 240vh;
+    background: #313638;
+    .container {
+      .text {
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .Process {
+    height: 270vh;
+    background: #313638;
+    .container {
+      .text {
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
